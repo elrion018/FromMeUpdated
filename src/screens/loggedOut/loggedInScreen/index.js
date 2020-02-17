@@ -2,6 +2,14 @@ import {connect} from 'react-redux';
 import LogInScreen from './presenter';
 import {actionCreators as userActions} from '../../../redux/user';
 
+const mapStateToProps = (state, ownProps) => {
+  const {user} = state;
+
+  return {
+    user,
+  };
+};
+
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     setToken: () => {
@@ -20,6 +28,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(LogInScreen);

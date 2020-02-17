@@ -12,7 +12,7 @@ class RootContainer extends React.Component {
         <StatusBar hidden={false} />
         {isLoggedIn ? (
           // Home 화면으로 이동
-          <LoggedInNavigation />
+          <LoggedOutNavigation />
         ) : (
           // Login 화면으로 이동
           <LoggedOutNavigation />
