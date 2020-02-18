@@ -18,10 +18,10 @@ export default StyleSheet.create({
     height: hp('50%'),
     ...Platform.select({
       ios: {
-        marginBottom: hp('30%'),
+        marginBottom: hp('9%'),
       },
       android: {
-        marginBottom: hp('15%'),
+        marginBottom: hp('6%'),
       },
     }),
   },
@@ -39,13 +39,14 @@ export default StyleSheet.create({
     }),
   },
   inputText: {
+    fontWeight: 'bold',
     textAlign: 'justify',
     borderBottomWidth: 4,
     borderColor: 'black',
     ...Platform.select({
       ios: {
         width: wp('70%'),
-        fontSize: 35,
+        fontSize: 30,
         marginBottom: hp('2%'),
       },
       android: {
@@ -64,16 +65,16 @@ export default StyleSheet.create({
       ios: {
         width: wp('70%'),
         height: hp('6%'),
-        marginBottom: hp('2%'),
+        marginBottom: hp('10%'),
       },
       android: {
         width: wp('75%'),
         height: hp('8%'),
-        marginBottom: hp('1%'),
       },
     }),
   },
   signUpText: {
+    fontWeight: 'bold',
     textAlign: 'justify',
     ...Platform.select({
       ios: {

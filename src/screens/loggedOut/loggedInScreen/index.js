@@ -12,12 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    setToken: () => {
-      dispatch(userActions.setToken());
-    },
-    setUser: () => {
-      dispatch(userActions.setUser());
-    },
     setLogIn: () => {
       dispatch(userActions.setLogIn());
     },
