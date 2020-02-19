@@ -2,12 +2,10 @@ import {connect} from 'react-redux';
 import HomeScreen from './presenter';
 
 const mapStateToProps = (state, ownProps) => {
-  const {
-    user: {userInfo},
-  } = state;
+  const {user} = state;
 
   return {
-    userInfo,
+    user,
   };
 };
 

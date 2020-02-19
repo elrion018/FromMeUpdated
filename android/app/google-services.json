@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "101422171202",
+    "firebase_url": "https://fromme-bb302.firebaseio.com",
+    "project_id": "fromme-bb302",
+    "storage_bucket": "fromme-bb302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101422171202:android:42d4ba26a35d9a23e959db",
+        "android_client_info": {
+          "package_name": "com.heyum.FromMe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "101422171202-hr47pmduccth8kbo6o1vdj4va9icmuha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPcFniwy0ff9E-WAAJEHw16LZ_hYuckmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "101422171202-hr47pmduccth8kbo6o1vdj4va9icmuha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

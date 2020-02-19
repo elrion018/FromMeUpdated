@@ -1,83 +1,101 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
-  container_HomeScreen: {
+  container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#FFFFF7',
+    alignItems: 'center',
   },
-  makeSpaceForTitle_HomeScreen: {
-    flex: 10,
+  timePick: {
     height: hp('10%'),
-    width: wp('100%'),
-  },
-  titleBox_HomeScreen: {
-    height: hp('8%'),
-    width: wp('100%'),
-  },
-
-  titleText_HomeScreen: {
-    color: 'black',
-    textAlign: 'center',
-    fontSize: wp('6%'),
-  },
-  titleLine_HomeScreen: {
-    borderBottomWidth: 1,
-    borderBottomColor: 'black',
-    marginHorizontal: 145,
-  },
-
-  titleSpace_HomeScreen: {
-    flex: 10,
-    height: hp('10%'),
-    width: wp('100%'),
+    alignItems: 'center',
     justifyContent: 'center',
   },
-
-  spaceBetweenTitleAndContents_HomeScreen: {
-    flex: 7,
-    height: hp('7%'),
-    width: wp('100%'),
+  timePickButton: {
+    flexDirection: 'row',
   },
-
-  contents2_HomeScreen: {
-    flex: 60,
-    height: hp('60%'),
-    width: wp('100%'),
+  timePickTextBe: {
+    fontSize: 15,
+    color: '#C7CBC1',
+  },
+  timePickTextAf: {
+    fontSize: 15,
+    color: '#1B00BF',
+  },
+  contentsWithkeyboard: {
+    width: wp('90%'),
+    ...Platform.select({
+      ios: {
+        height: hp('35%'),
+      },
+      android: {
+        height: hp('30%'),
+      },
+    }),
+  },
+  contentsWithoutkeyboard: {
+    width: wp('90%'),
+    height: hp('70%'),
+  },
+  modalContainer: {
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  contents3_HomeScreen: {
-    backgroundColor: '#1B00BF',
-    height: 6,
-    width: 6,
-    borderRadius: 3,
-    marginTop: hp('5%'),
-    marginBottom: hp('5%'),
+  sendModal: {
+    height: hp('25%'),
+    width: wp('80%'),
+    borderWidth: 1,
+    borderRadius: 28,
+    borderColor: '#4f5458',
+    backgroundColor: '#FFFFF7',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgb(50, 50, 50)',
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+        shadowOffset: {
+          height: 3,
+          width: 2,
+        },
+      },
+      android: {
+        elevation: 2,
+      },
+    }),
   },
-
-  contents4_HomeScreen: {
-    backgroundColor: '#BF008A',
-    height: 6,
-    width: 6,
-    borderRadius: 3,
-    marginTop: hp('5%'),
-    marginBottom: hp('5%'),
+  sendText: {
+    fontSize: 30,
+    fontWeight: 'bold',
   },
-
-  contents5_HomeScreen: {
-    flex: 13,
-    height: hp('13%'),
-    width: wp('100%'),
-  },
-
-  button_HomeScreen: {
-    color: 'black',
-    textAlign: 'center',
-    fontSize: wp('5%'),
+  timeModal: {
+    width: wp('80%'),
+    borderWidth: 1,
+    borderRadius: 28,
+    borderColor: '#4f5458',
+    backgroundColor: '#FFFFF7',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgb(50, 50, 50)',
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+        shadowOffset: {
+          height: 3,
+          width: 2,
+        },
+        height: hp('30%'),
+      },
+      android: {
+        elevation: 2,
+        height: hp('40%'),
+      },
+    }),
   },
 });

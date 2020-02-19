@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -9,43 +9,49 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFF7',
   },
-  makeSpaceForTitle_HomeScreen: {
-    flex: 10,
-    height: hp('10%'),
-    width: wp('100%'),
-  },
   titleBox_HomeScreen: {
-    height: hp('8%'),
     width: wp('100%'),
   },
 
   titleText_HomeScreen: {
     color: 'black',
     textAlign: 'center',
-    fontSize: wp('6%'),
+    fontSize: 30,
   },
   titleLine_HomeScreen: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderBottomColor: 'black',
-    marginHorizontal: 145,
+    ...Platform.select({
+      ios: {
+        marginHorizontal: 130,
+        marginTop: hp('2%'),
+      },
+      android: {
+        marginHorizontal: 130,
+        marginTop: hp('3%'),
+      },
+    }),
   },
 
   titleSpace_HomeScreen: {
-    flex: 10,
     height: hp('10%'),
     width: wp('100%'),
     justifyContent: 'center',
   },
 
   spaceBetweenTitleAndContents_HomeScreen: {
-    flex: 7,
-    height: hp('7%'),
-    width: wp('100%'),
+    ...Platform.select({
+      ios: {
+        height: hp('5%'),
+      },
+      android: {
+        height: hp('7%'),
+      },
+    }),
   },
 
   contents2_HomeScreen: {
-    flex: 60,
-    height: hp('60%'),
+    marginTop: hp('10%'),
     width: wp('100%'),
     justifyContent: 'center',
     alignItems: 'center',
@@ -53,31 +59,29 @@ export default StyleSheet.create({
 
   contents3_HomeScreen: {
     backgroundColor: '#1B00BF',
-    height: 6,
-    width: 6,
-    borderRadius: 3,
+    height: 10,
+    width: 10,
+    borderRadius: 5,
     marginTop: hp('5%'),
     marginBottom: hp('5%'),
   },
 
   contents4_HomeScreen: {
     backgroundColor: '#BF008A',
-    height: 6,
-    width: 6,
-    borderRadius: 3,
+    height: 10,
+    width: 10,
+    borderRadius: 5,
     marginTop: hp('5%'),
     marginBottom: hp('5%'),
   },
 
   contents5_HomeScreen: {
-    flex: 13,
     height: hp('13%'),
-    width: wp('100%'),
   },
 
   button_HomeScreen: {
     color: 'black',
     textAlign: 'center',
-    fontSize: wp('5%'),
+    fontSize: 25,
   },
 });

@@ -1,4 +1,4 @@
-package com.fromme;
+package com.heyum.FromMe;
 
 import com.facebook.react.ReactActivity;
 
