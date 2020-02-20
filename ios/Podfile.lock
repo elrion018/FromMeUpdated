@@ -12,49 +12,40 @@ PODS:
     - React-Core (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/turbomodule/core (= 0.61.5)
-  - Firebase/Core (6.13.0):
+  - Firebase/Core (6.2.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 6.1.6)
-  - Firebase/CoreOnly (6.13.0):
-    - FirebaseCore (= 6.4.0)
-  - Firebase/Messaging (6.13.0):
+    - FirebaseAnalytics (= 6.0.1)
+  - Firebase/CoreOnly (6.2.0):
+    - FirebaseCore (= 6.0.2)
+  - Firebase/Messaging (6.2.0):
     - Firebase/CoreOnly
-    - FirebaseMessaging (~> 4.1.9)
-  - FirebaseAnalytics (6.1.6):
-    - FirebaseCore (~> 6.4)
-    - FirebaseInstanceID (~> 4.2)
-    - GoogleAppMeasurement (= 6.1.6)
+    - FirebaseMessaging (~> 4.0.2)
+  - FirebaseAnalytics (6.0.1):
+    - FirebaseCore (~> 6.0)
+    - FirebaseInstanceID (~> 4.1)
+    - GoogleAppMeasurement (= 6.0.1)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (= 0.3.9011)
+    - nanopb (~> 0.3)
   - FirebaseAnalyticsInterop (1.5.0)
-  - FirebaseCore (6.4.0):
-    - FirebaseCoreDiagnostics (~> 1.0)
-    - FirebaseCoreDiagnosticsInterop (~> 1.0)
-    - GoogleUtilities/Environment (~> 6.2)
-    - GoogleUtilities/Logger (~> 6.2)
-  - FirebaseCoreDiagnostics (1.2.0):
-    - FirebaseCoreDiagnosticsInterop (~> 1.2)
-    - GoogleDataTransportCCTSupport (~> 1.3)
-    - GoogleUtilities/Environment (~> 6.5)
-    - GoogleUtilities/Logger (~> 6.5)
-    - nanopb (~> 0.3.901)
-  - FirebaseCoreDiagnosticsInterop (1.2.0)
+  - FirebaseCore (6.0.2):
+    - GoogleUtilities/Environment (~> 6.0)
+    - GoogleUtilities/Logger (~> 6.0)
   - FirebaseInstanceID (4.2.7):
     - FirebaseCore (~> 6.0)
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
-  - FirebaseMessaging (4.1.10):
-    - FirebaseAnalyticsInterop (~> 1.3)
-    - FirebaseCore (~> 6.2)
+  - FirebaseMessaging (4.0.2):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 6.0)
     - FirebaseInstanceID (~> 4.1)
     - GoogleUtilities/AppDelegateSwizzler (~> 6.2)
     - GoogleUtilities/Environment (~> 6.2)
     - GoogleUtilities/Reachability (~> 6.2)
     - GoogleUtilities/UserDefaults (~> 6.2)
-    - Protobuf (>= 3.9.2, ~> 3.9)
+    - Protobuf (~> 3.1)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -65,16 +56,12 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - GoogleAppMeasurement (6.1.6):
+  - GoogleAppMeasurement (6.0.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (= 0.3.9011)
-  - GoogleDataTransport (4.0.0)
-  - GoogleDataTransportCCTSupport (1.4.0):
-    - GoogleDataTransport (~> 4.0)
-    - nanopb (~> 0.3.901)
+    - nanopb (~> 0.3)
   - GoogleUtilities/AppDelegateSwizzler (6.5.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -299,17 +286,15 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/jscallinvoker (= 0.61.5)
-  - RNCAsyncStorage (1.8.0):
-    - React
   - RNCMaskedView (0.1.6):
     - React
   - RNDateTimePicker (2.2.2):
     - React
-  - RNFirebase (5.6.0):
+  - RNFirebase (5.5.5):
     - Firebase/Core
     - React
-    - RNFirebase/Crashlytics (= 5.6.0)
-  - RNFirebase/Crashlytics (5.6.0):
+    - RNFirebase/Crashlytics (= 5.5.5)
+  - RNFirebase/Crashlytics (5.5.5):
     - Crashlytics
     - Fabric
     - Firebase/Core
@@ -326,8 +311,8 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
-  - Firebase/Core (~> 6.13.0)
-  - Firebase/Messaging (~> 6.13.0)
+  - Firebase/Core (~> 6.2.0)
+  - Firebase/Messaging (~> 6.2.0)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
@@ -353,7 +338,6 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNFirebase (from `../node_modules/react-native-firebase/ios`)
@@ -371,13 +355,9 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
     - FirebaseCore
-    - FirebaseCoreDiagnostics
-    - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
     - FirebaseMessaging
     - GoogleAppMeasurement
-    - GoogleDataTransport
-    - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
     - Protobuf
@@ -433,8 +413,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  RNCAsyncStorage:
-    :path: "../node_modules/@react-native-community/async-storage"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
   RNDateTimePicker:
@@ -457,19 +435,15 @@ SPEC CHECKSUMS:
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
-  Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
-  FirebaseAnalytics: 45f36d9c429fc91d206283900ab75390cd05ee8a
+  Firebase: 5965bac23e7fcb5fa6d926ed429c9ecef8a2014e
+  FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
-  FirebaseCore: 307ea2508df730c5865334e41965bd9ea344b0e5
-  FirebaseCoreDiagnostics: 5e78803ab276bc5b50340e3c539c06c3de35c649
-  FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
+  FirebaseCore: b0f0262acebfa540e5f97b3832dbb13186980822
   FirebaseInstanceID: ebd2ea79ee38db0cb5f5167b17a0d387e1cc7b6e
-  FirebaseMessaging: 089b7a4991425783384acc8bcefcd78c0af913bd
+  FirebaseMessaging: 20b6626c41be7840aed7a3dd9a14003efae3d588
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
-  GoogleDataTransport: 47fe3b8e1673e5187dfd615656a3c5034f150d69
-  GoogleDataTransportCCTSupport: 36f69887fd212db6d7ef4dd45ba44523717a434e
+  GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
@@ -493,15 +467,14 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  RNCAsyncStorage: 455b48eb552543bad4e3099e180e1700700771f3
   RNCMaskedView: e5b99bc191945f157adeede68da9d424462de177
   RNDateTimePicker: 501ab152e78882c183607e05074c37ce19ace5bf
-  RNFirebase: 37daa9a346d070f9f6ee1f3b4aaf4c8e3b1d5d1c
+  RNFirebase: b627e5991bb10bf34cea84806819f98f95f39f8b
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: 6053a007667bea81a69087caadf103bba04c032e
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: e5a53e66a9d11b27b1e64c4cbb0b7266f79202d6
+PODFILE CHECKSUM: 43787286d32d1eaf3fa98d3d8d06babc20b61790
 
 COCOAPODS: 1.8.4
