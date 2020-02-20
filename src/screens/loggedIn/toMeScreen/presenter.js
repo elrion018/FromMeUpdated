@@ -128,14 +128,14 @@ const ToMeScreen = props => {
         <View style={styles.modalContainer}>
           <View style={styles.timeModal}>
             <ScrollView>
-              {timeList.map(data => {
+              {timeList.map((data, index) => {
                 return (
                   <TouchableOpacity
                     onPress={() => {
                       setTime(Object.keys(data));
                       setTimeModal(!timeModal);
                     }}>
-                    <Card key={Object.keys(data)} text={Object.keys(data)} />
+                    <Card key={index} text={Object.keys(data)} />
                   </TouchableOpacity>
                 );
               })}

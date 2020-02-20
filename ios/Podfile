@@ -34,8 +34,10 @@ target 'FromMe' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   
-  pod 'Firebase/Core', '~> 6.2.0'
-  pod 'Firebase/Messaging', '~> 6.2.0'
+  pod 'Firebase/Core', '~> 6.13.0'
+  pod 'Firebase/Messaging', '~> 6.13.0'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+  
   
   target 'FromMeTests' do
     inherit! :search_paths
