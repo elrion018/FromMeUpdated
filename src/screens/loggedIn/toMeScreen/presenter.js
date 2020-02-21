@@ -8,16 +8,17 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Keyboard,
-  Alert,
+  PushNotificationIOS,
 } from 'react-native';
 import styles from './styles.js';
 import {useHeaderHeight} from '@react-navigation/stack';
 import Modal from 'react-native-modal';
 import Card from '../../../components/toMeScreen/timeList';
-//import firebase from 'react-native-firebase';
-//import AsyncStorage from '@react-native-community/async-storage';
+import Scheduling from '../../../components/toMeScreen/scheduleFunction';
+import PushNotification from 'react-native-push-notification';
 
 const ToMeScreen = props => {
+  console.log(Platform.OS, ':', props.user);
   props.navigation.setOptions({
     headerRight: () => (
       <TouchableOpacity
@@ -31,11 +32,12 @@ const ToMeScreen = props => {
   /* 네비게이션 오른쪽 보내기 버튼 스크린과 연결 */
 
   const [contents, setContents] = useState('');
-  const [time, setTime] = useState('얼마 후');
+  const [timeText, setTimeText] = useState('얼마 후');
+  const [time, setTime] = useState(0);
   const [sendModal, setSendModal] = useState(false);
   const [timeModal, setTimeModal] = useState(true);
   let timeList = [
-    {'10분 후': 10},
+    {'10분 후': 20},
     {'30분 후': 30},
     {'1시간 후': 60},
     {'3시간 후': 180},
@@ -44,12 +46,16 @@ const ToMeScreen = props => {
     {'1달 후': 100},
     {'3달 후': 300},
   ];
-  /* 훅 사용, contents: 글 내용, time: 선택한 시간, sendModal, timeModal: 각각 보내기 버튼과 시간을 클릭할 때 나오는 모달창 */
 
-  /* 최초에 노티채널과 체크 퍼미션 호출 */
+  const choseTime = data => {
+    setTimeText(Object.keys(data));
+    setTime(Object.values(data));
+    setTimeModal(!timeModal);
+  };
 
   const send = to => {
     setSendModal(!sendModal);
+    Scheduling(time);
     Keyboard.dismiss();
     if (to === 0) {
       console.log('To. me');
@@ -58,7 +64,6 @@ const ToMeScreen = props => {
     }
   };
 
-  console.log(Platform.OS, ':', props.user);
   return (
     <View style={styles.container}>
       <View style={{height: useHeaderHeight()}} />
@@ -72,7 +77,7 @@ const ToMeScreen = props => {
             style={
               time === '얼마 후' ? styles.timePickTextBe : styles.timePickTextAf
             }>
-            {time}
+            {timeText}
           </Text>
           <Text style={styles.timePickText}>의 당신에게 전해드릴까요?</Text>
         </TouchableOpacity>
@@ -132,8 +137,7 @@ const ToMeScreen = props => {
                 return (
                   <TouchableOpacity
                     onPress={() => {
-                      setTime(Object.keys(data));
-                      setTimeModal(!timeModal);
+                      choseTime(data);
                     }}>
                     <Card key={index} text={Object.keys(data)} />
                   </TouchableOpacity>
