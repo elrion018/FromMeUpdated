@@ -9,7 +9,8 @@
 # 2. 구성
 ---------------------
 1. react-native cli를 바탕으로한 모바일 앱 개발
-2. google firebase를 활용해, local notification과 push notification 기능을 넣으려 함.
+2. 백엔드는 spring 사용 예정
+3. ec2 서버 및 Mysql RDBMS 사용
 
 
 # 3. 겪고 있는 문제
@@ -33,3 +34,10 @@
 참고: (https://github.com/zo0r/react-native-push-notification)
 
 4. 시간 설정 기능은 componets/toMeScreen/scheduleFunction 에 넣었다. 이전보다 코드가 깔끔해졌다. ( 깔끔해졌다기보다 조금이나마 사람다워졌다. 발로 짜도 이전 코드보다는 잘 짰었을 듯 )
+
+
+# 4. Task
+---------------------
+- ToMeScreen의 질문 리스트를 서버로 이전하여 사용자가 ToMeScreen에 진입할 때마다 랜덤으로 질문을 받아오도록 한다.
+> 질문 업데이트를 자주 할 수 있다는 장점이 있다.
+> 매번 서버에서 받아오는 것이 서버에 부담을 안 줄까? 하는 고민. => 물론 내 서버의 사용자 수 정도는 가뿐히 처리하겠지만
