@@ -29,3 +29,7 @@
 > 1. AndroidManifest.xml 파일에 다음과 같은 내용을 추가하는데, value에 내 패키지 명을 넣었다. Firebase에서 진행할 때는 저걸 그대로 뒀던거 같은데, 혹시 그게 문제가 아니였을까.    
 <meta-data  android:name="com.dieam.reactnativepushnotification.notification_channel_name" android:value="YOUR NOTIFICATION CHANNEL NAME"/> 일단, 지금 툴을 계속 설치해보겠다.
 > 2. 로컬 알람 기능 베이스 설치 완료. 진작에 이걸로 할 걸 ㅡ,.ㅡ => react-native-push-notification 활용
+참고: (https://dev-yakuza.github.io/ko/react-native/react-native-push-notification/)
+참고: (https://github.com/zo0r/react-native-push-notification)
+
+4. 시간 설정 기능은 componets/toMeScreen/scheduleFunction 에 넣었다. 이전보다 코드가 깔끔해졌다. ( 깔끔해졌다기보다 조금이나마 사람다워졌다. 발로 짜도 이전 코드보다는 잘 짰었을 듯 )

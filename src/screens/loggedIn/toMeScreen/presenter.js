@@ -10,12 +10,13 @@ import {
   Keyboard,
   PushNotificationIOS,
 } from 'react-native';
-import styles from './styles.js';
 import {useHeaderHeight} from '@react-navigation/stack';
 import Modal from 'react-native-modal';
+import PushNotification from 'react-native-push-notification';
+import styles from './styles.js';
 import Card from '../../../components/toMeScreen/timeList';
 import Scheduling from '../../../components/toMeScreen/scheduleFunction';
-import PushNotification from 'react-native-push-notification';
+import QuestionList from '../../../components/toMeScreen/question';
 
 const ToMeScreen = props => {
   console.log(Platform.OS, ':', props.user);
@@ -36,6 +37,7 @@ const ToMeScreen = props => {
   const [time, setTime] = useState();
   const [sendModal, setSendModal] = useState(false);
   const [timeModal, setTimeModal] = useState(true);
+  const [question, setQuestion] = useState('');
   let timeList = [
     {'10분 후': [0, 10]},
     {'30분 후': [0, 30]},
@@ -55,10 +57,8 @@ const ToMeScreen = props => {
         notification.finish(PushNotificationIOS.FetchResult.NoData);
       },
     });
-    let now = new Date(Date.now());
-    let now2 = new Date(Date.now());
-    now.setMinutes(now.getMinutes() + 10);
-    console.log(now, now2);
+    let sentence = QuestionList();
+    setQuestion(sentence);
   }, []);
 
   const choseTime = data => {
@@ -107,7 +107,7 @@ const ToMeScreen = props => {
         <ScrollView contentContainerStyle={{flex: 1}}>
           <TextInput
             style={styles.textInput}
-            placeholder={'미래의 당신이 읽습니다.'}
+            placeholder={question}
             placeholderTextColor={'#C7CBC1'}
             returnKeyType={'done'}
             maxLength={2000}
