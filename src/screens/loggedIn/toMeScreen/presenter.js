@@ -33,19 +33,33 @@ const ToMeScreen = props => {
 
   const [contents, setContents] = useState('');
   const [timeText, setTimeText] = useState('얼마 후');
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState();
   const [sendModal, setSendModal] = useState(false);
   const [timeModal, setTimeModal] = useState(true);
   let timeList = [
-    {'10분 후': 20},
-    {'30분 후': 30},
-    {'1시간 후': 60},
-    {'3시간 후': 180},
-    {'1주일 후': 1},
-    {'3주일 후': 3},
-    {'1달 후': 100},
-    {'3달 후': 300},
+    {'10분 후': [0, 10]},
+    {'30분 후': [0, 30]},
+    {'1시간 후': [1, 1]},
+    {'3시간 후': [1, 3]},
+    {'1일 후': [2, 1]},
+    {'3일 후': [2, 3]},
+    {'1주일 후': [2, 7]},
+    {'3주일 후': [2, 21]},
+    {'1달 후': [3, 1]},
+    {'3달 후': [3, 3]},
   ];
+
+  useEffect(() => {
+    PushNotification.configure({
+      onNotification: function(notification) {
+        notification.finish(PushNotificationIOS.FetchResult.NoData);
+      },
+    });
+    let now = new Date(Date.now());
+    let now2 = new Date(Date.now());
+    now.setMinutes(now.getMinutes() + 10);
+    console.log(now, now2);
+  }, []);
 
   const choseTime = data => {
     setTimeText(Object.keys(data));
@@ -55,12 +69,12 @@ const ToMeScreen = props => {
 
   const send = to => {
     setSendModal(!sendModal);
-    Scheduling(time);
+    let temp = Scheduling(time);
     Keyboard.dismiss();
     if (to === 0) {
-      console.log('To. me');
+      console.log('To. me', temp);
     } else {
-      console.log('To. others');
+      console.log('To. others', temp);
     }
   };
 
