@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {TouchableOpacity, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import homeScreen from '../screens/loggedIn/homeScreen';
 import toMeScreen from '../screens/loggedIn/toMeScreen';
+import fromMeScreen from '../screens/loggedIn/toMeScreen';
+import fromOthersScreen from '../screens/loggedIn/toMeScreen';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,20 @@ function LoggedInNav(props) {
           options={({navigation}) => ({
             title: 'To.Me',
             headerRightContainerStyle: {paddingRight: 20},
+          })}
+        />
+        <Stack.Screen
+          name="toMe"
+          component={fromMeScreen}
+          options={({navigation}) => ({
+            title: 'From.Me',
+          })}
+        />
+        <Stack.Screen
+          name="toMe"
+          component={fromOthersScreen}
+          options={({navigation}) => ({
+            title: 'From.Others',
           })}
         />
       </Stack.Navigator>
