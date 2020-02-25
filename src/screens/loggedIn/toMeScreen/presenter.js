@@ -59,7 +59,10 @@ const ToMeScreen = props => {
     });
     let sentence = QuestionList();
     setQuestion(sentence);
-  }, []);
+    if (props.route.params?.contents) {
+      setContents(props.route.params.contents);
+    }
+  }, [props.route.params]);
 
   const choseTime = data => {
     setTimeText(Object.keys(data));

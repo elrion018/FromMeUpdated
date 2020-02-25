@@ -25,14 +25,14 @@ const HomeScreen = props => {
         <View style={styles.contents3_HomeScreen} />
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('Question');
+            props.navigation.navigate('fromMe');
           }}>
           <Text style={styles.button_HomeScreen}>From. me</Text>
         </TouchableOpacity>
         <View style={styles.contents4_HomeScreen} />
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('Question2');
+            props.navigation.navigate('fromOthers');
           }}>
           <Text style={styles.button_HomeScreen}>From. others</Text>
         </TouchableOpacity>

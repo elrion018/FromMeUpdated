@@ -5,14 +5,15 @@ import {
 } from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFFFF7',
+  item: {
+    width: wp('60%'),
+    borderBottomWidth: 1,
+    borderBottomColor: '#DADADA',
     alignItems: 'center',
-    justifyContent: 'center',
   },
-  contentsBox: {
-    width: wp('100%'),
-    height: hp('90%'),
+  text: {
+    fontSize: 20,
+    marginTop: hp('2%'),
+    marginBottom: hp('2%'),
   },
 });

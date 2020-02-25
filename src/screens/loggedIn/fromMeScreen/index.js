@@ -15,9 +15,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     setLogIn: () => {
       dispatch(userActions.setLogIn());
     },
-    setLogOut: () => {
-      dispatch(userActions.setLogOut());
-    },
   };
 };
 

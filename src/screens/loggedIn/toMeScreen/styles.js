@@ -19,12 +19,18 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   timePickTextBe: {
-    fontSize: 15,
+    fontSize: 18,
     color: '#C7CBC1',
   },
   timePickTextAf: {
-    fontSize: 15,
+    fontSize: 18,
     color: '#1B00BF',
+  },
+  timePickText: {
+    fontSize: 18,
+  },
+  textInput: {
+    fontSize: 18,
   },
   contentsWithkeyboard: {
     width: wp('90%'),
