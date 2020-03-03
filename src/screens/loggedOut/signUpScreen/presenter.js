@@ -14,6 +14,7 @@ import styles from './styles';
 const SignUpScreen = props => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
+  const [password2, setPassword2] = useState('');
   const [nickName, setNickName] = useState('');
 
   console.log(
@@ -41,7 +42,7 @@ const SignUpScreen = props => {
             onChangeText={text => {
               setPhoneNumber(text);
             }}
-            placeholder={'phoneNumber'}
+            placeholder={'phoneNumber(-제외)'}
             placeholderTextColor={'#C7CBC1'}
             maxLength={11}
             keyboardType={'number-pad'}
@@ -67,6 +68,18 @@ const SignUpScreen = props => {
               setPassword(text);
             }}
             placeholder={'password'}
+            placeholderTextColor={'#C7CBC1'}
+            maxLength={12}
+            multiline={false}
+            underlineColorAndroid={'transparent'}
+          />
+          <TextInput
+            style={styles.inputText}
+            value={password2}
+            onChangeText={text => {
+              setPassword2(text);
+            }}
+            placeholder={'password Check'}
             placeholderTextColor={'#C7CBC1'}
             maxLength={12}
             multiline={false}

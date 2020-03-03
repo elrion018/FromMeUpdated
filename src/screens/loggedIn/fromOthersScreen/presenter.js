@@ -60,7 +60,7 @@ const FromOthersScreen = () => {
           //onRefresh={}
           onEndReachedThreshold={1}
           //onEndReached={}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.id.toString()}
           contentContainerStyle={{alignItems: 'center'}}
         />
       </View>
